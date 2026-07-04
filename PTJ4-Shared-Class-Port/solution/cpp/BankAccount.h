@@ -1,3 +1,8 @@
+
+/****************
+*   SOLUTION   *
+****************/
+
 #pragma once
 
 #include <string>

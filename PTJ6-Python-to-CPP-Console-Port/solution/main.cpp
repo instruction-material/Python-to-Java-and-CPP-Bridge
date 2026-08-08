@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 
-
 /*****************
 *   CONSTANTS   *
 *****************/
@@ -11,7 +10,6 @@ constexpr int ROUND_COUNT = 3;
 constexpr int POINTS_PER_MATCH = 1;
 constexpr int NO_MATCH_POINTS = 0;
 const std::vector<std::string> SECRET_WORDS = {"vector", "compile", "header"};
-
 
 /*****************
 *   FUNCTIONS   *
@@ -26,16 +24,17 @@ const std::vector<std::string> SECRET_WORDS = {"vector", "compile", "header"};
  *
  * @return Points earned for the guess
  */
-int score_round(const std::string& guess, const std::vector<std::string>& secret_words) {
-	// Search for the guess in the accepted word list
-	for (const std::string& word : secret_words) {
-		// Award a point when the guess matches a secret word
-		if (word == guess) {
-			return POINTS_PER_MATCH;
-		}
-	}
+int score_round(const std::string& guess,
+                const std::vector<std::string>& secret_words) {
+    // Search for the guess in the accepted word list
+    for (const std::string& word : secret_words) {
+        // Award a point when the guess matches a secret word
+        if (word == guess) {
+            return POINTS_PER_MATCH;
+        }
+    }
 
-	return NO_MATCH_POINTS;
+    return NO_MATCH_POINTS;
 }
 
 /**
@@ -44,15 +43,15 @@ int score_round(const std::string& guess, const std::vector<std::string>& secret
  * @return Process exit code
  */
 int main() {
-	std::string guess;
-	int score = NO_MATCH_POINTS;
+    std::string guess;
+    int score = NO_MATCH_POINTS;
 
-	// Ask for one guess per round
-	for (int round = 0; round < ROUND_COUNT; ++round) {
-		std::cout << "Guess a bridge word: ";
-		std::cin >> guess;
-		score += score_round(guess, SECRET_WORDS);
-	}
+    // Ask for one guess per round
+    for (int round = 0; round < ROUND_COUNT; ++round) {
+        std::cout << "Guess a bridge word: ";
+        std::cin >> guess;
+        score += score_round(guess, SECRET_WORDS);
+    }
 
-	std::cout << "Score: " << score << "\n";
+    std::cout << "Score: " << score << "\n";
 }

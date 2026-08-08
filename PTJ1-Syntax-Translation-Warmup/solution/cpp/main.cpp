@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 
-
 /*****************
 *   CONSTANTS   *
 *****************/
@@ -16,7 +15,6 @@ constexpr int BUZZ_DIVISOR = 5;
 constexpr int FIZZ_BUZZ_DIVISOR = FIZZ_DIVISOR * BUZZ_DIVISOR;
 const std::vector<int> CHECK_VALUES = {-7, -2, 0, 3, 5, 15};
 
-
 /*****************
 *   FUNCTIONS   *
 *****************/
@@ -29,7 +27,7 @@ const std::vector<int> CHECK_VALUES = {-7, -2, 0, 3, 5, 15};
  * @return Greeting text
  */
 std::string greeting(const std::string& name) {
-	return "Hello, " + name + "!";
+    return "Hello, " + name + "!";
 }
 
 /**
@@ -40,7 +38,7 @@ std::string greeting(const std::string& name) {
  * @return Non-negative absolute value
  */
 int absolute_value(int value) {
-	return value < 0 ? -value : value;
+    return value < 0 ? -value : value;
 }
 
 /**
@@ -51,7 +49,7 @@ int absolute_value(int value) {
  * @return True when the value is even
  */
 bool is_even(int value) {
-	return value % EVEN_DIVISOR == 0;
+    return value % EVEN_DIVISOR == 0;
 }
 
 /**
@@ -62,22 +60,22 @@ bool is_even(int value) {
  * @return FizzBuzz label or the original value as text
  */
 std::string fizz_buzz_label(int value) {
-	// Prefer the combined label when both divisibility rules match
-	if (value % FIZZ_BUZZ_DIVISOR == 0) {
-		return "FizzBuzz";
-	}
+    // Prefer the combined label when both divisibility rules match
+    if (value % FIZZ_BUZZ_DIVISOR == 0) {
+        return "FizzBuzz";
+    }
 
-	// Apply the fizz label for multiples of three
-	if (value % FIZZ_DIVISOR == 0) {
-		return "Fizz";
-	}
+    // Apply the fizz label for multiples of three
+    if (value % FIZZ_DIVISOR == 0) {
+        return "Fizz";
+    }
 
-	// Apply the buzz label for multiples of five
-	if (value % BUZZ_DIVISOR == 0) {
-		return "Buzz";
-	}
+    // Apply the buzz label for multiples of five
+    if (value % BUZZ_DIVISOR == 0) {
+        return "Buzz";
+    }
 
-	return std::to_string(value);
+    return std::to_string(value);
 }
 
 /**
@@ -86,14 +84,14 @@ std::string fizz_buzz_label(int value) {
  * @return Process exit code
  */
 int main() {
-	std::cout << greeting(SAMPLE_NAME) << "\n";
-	std::cout << absolute_value(NEGATIVE_SAMPLE_VALUE) << "\n";
-	std::cout << std::boolalpha << is_even(EVEN_SAMPLE_VALUE) << "\n";
+    std::cout << greeting(SAMPLE_NAME) << "\n";
+    std::cout << absolute_value(NEGATIVE_SAMPLE_VALUE) << "\n";
+    std::cout << std::boolalpha << is_even(EVEN_SAMPLE_VALUE) << "\n";
 
-	// Print the FizzBuzz label for each sample value
-	for (const int value : CHECK_VALUES) {
-		std::cout << fizz_buzz_label(value) << " ";
-	}
+    // Print the FizzBuzz label for each sample value
+    for (const int value : CHECK_VALUES) {
+        std::cout << fizz_buzz_label(value) << " ";
+    }
 
-	std::cout << "\n";
+    std::cout << "\n";
 }

@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 
-
 /*****************
 *   CONSTANTS   *
 *****************/
@@ -14,7 +13,6 @@ constexpr int SAMPLE_SCORE = 140;
 constexpr double SAMPLE_SUBTOTAL = 42.5;
 const std::string SAMPLE_TEXT = "Bridge Course";
 const std::string VOWELS = "aeiou";
-
 
 /*****************
 *   FUNCTIONS   *
@@ -28,17 +26,17 @@ const std::string VOWELS = "aeiou";
  * @return Score limited to the minimum and maximum bounds
  */
 int clamp_score(int score) {
-	// Return the lower bound when the score is too small
-	if (score < MINIMUM_SCORE) {
-		return MINIMUM_SCORE;
-	}
+    // Return the lower bound when the score is too small
+    if (score < MINIMUM_SCORE) {
+        return MINIMUM_SCORE;
+    }
 
-	// Return the upper bound when the score is too large
-	if (score > MAXIMUM_SCORE) {
-		return MAXIMUM_SCORE;
-	}
+    // Return the upper bound when the score is too large
+    if (score > MAXIMUM_SCORE) {
+        return MAXIMUM_SCORE;
+    }
 
-	return score;
+    return score;
 }
 
 /**
@@ -51,7 +49,7 @@ int clamp_score(int score) {
  * @return Final total price
  */
 double total_price(double subtotal, bool member) {
-	return member ? subtotal * MEMBER_DISCOUNT_RATE : subtotal;
+    return member ? subtotal * MEMBER_DISCOUNT_RATE : subtotal;
 }
 
 /**
@@ -62,19 +60,19 @@ double total_price(double subtotal, bool member) {
  * @return Number of vowels found
  */
 int count_vowels(const std::string& text) {
-	int count = 0;
+    int count = 0;
 
-	// Normalize each character before checking for a vowel
-	for (unsigned char letter : text) {
-		const char lower = static_cast<char>(std::tolower(letter));
+    // Normalize each character before checking for a vowel
+    for (unsigned char letter : text) {
+        const char lower = static_cast<char>(std::tolower(letter));
 
-		// Count the character when it appears in the vowel list
-		if (VOWELS.find(lower) != std::string::npos) {
-			count++;
-		}
-	}
+        // Count the character when it appears in the vowel list
+        if (VOWELS.find(lower) != std::string::npos) {
+            count++;
+        }
+    }
 
-	return count;
+    return count;
 }
 
 /**
@@ -83,7 +81,7 @@ int count_vowels(const std::string& text) {
  * @return Process exit code
  */
 int main() {
-	std::cout << clamp_score(SAMPLE_SCORE) << "\n";
-	std::cout << total_price(SAMPLE_SUBTOTAL, true) << "\n";
-	std::cout << count_vowels(SAMPLE_TEXT) << "\n";
+    std::cout << clamp_score(SAMPLE_SCORE) << "\n";
+    std::cout << total_price(SAMPLE_SUBTOTAL, true) << "\n";
+    std::cout << count_vowels(SAMPLE_TEXT) << "\n";
 }

@@ -29,6 +29,18 @@ The seven `graphics/` JavaFX programs depend on a separate GUI/toolchain. They
 are historical support examples, not console IDE projects or tested starter/
 reference pairs. Browser/native graphics workflow validation remains open.
 
-The required capstone currently points at one of the duplicated BRG scoring
-packs. Replacing that assignment and retiring unsupported duplicate links are
-pending site/source follow-ups, not completed by this PTJ-only correction.
+## Authored task-tracker capstone
+
+PTJ7 adds a complete supplied Python program with matching Java/C++ stateful
+ports and six unfinished callable methods in each target starter. The original
+six PTJ projects and all historical BRG/JavaFX source programs remain unchanged.
+Every starter import includes the complete contract, Python baseline, fixtures,
+staged walkthrough and native build/run commands; references remain separate.
+
+The native gate now compiles 24 starter/reference programs. Capstone checks use
+an independent ordered-state oracle, shared console fixtures, title/ID/budget
+boundaries, state-preserving rejections, fresh list outputs, Java alias and C++
+copy behavior, unfinished starter failures, LF/CRLF and EOF/QUIT handling.
+This is native source evidence, not full Java browser execution support or a
+production deployment claim. Catalog retirement and explicit starter choices
+are delivered separately by the accompanying site correction.

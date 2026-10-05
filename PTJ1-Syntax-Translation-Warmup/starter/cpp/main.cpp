@@ -1,25 +1,26 @@
+#include <stdexcept>
 #include <iostream>
 #include <string>
 #include <vector>
 
 std::string greeting(const std::string& name) {
     // TODO: return "Hello, <name>!"
-    return "";
+    throw std::logic_error("Implement the documented contract");
 }
 
 int absoluteValue(int value) {
     // TODO: return the non-negative version of value
-    return 0;
+    throw std::logic_error("Implement the documented contract");
 }
 
 bool isEven(int value) {
     // TODO: return true when value is even
-    return false;
+    throw std::logic_error("Implement the documented contract");
 }
 
 std::string fizzBuzzLabel(int value) {
     // TODO: return Fizz, Buzz, FizzBuzz, or the number as text
-    return "";
+    throw std::logic_error("Implement the documented contract");
 }
 
 int main() {

@@ -1,17 +1,17 @@
 public class Main {
     static int clampScore(int score) {
         // TODO: keep score in the range 0..100
-        return 0;
+        throw new UnsupportedOperationException("Implement the documented contract");
     }
 
     static double totalPrice(double subtotal, boolean member) {
         // TODO: apply 10% member discount when member is true
-        return 0.0;
+        throw new UnsupportedOperationException("Implement the documented contract");
     }
 
     static int countVowels(String text) {
         // TODO: count lowercase and uppercase vowels
-        return 0;
+        throw new UnsupportedOperationException("Implement the documented contract");
     }
 
     public static void main(String[] args) {

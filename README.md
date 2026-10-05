@@ -14,3 +14,12 @@ Shared Java and C++ foundation builds now live in their owning course repos:
 
 This repo keeps only bridge-specific materials plus the local `graphics/` support
 folder used by the bridge's Java transition exercises.
+
+## Verified original ports
+
+Start with `PTJ1` through `PTJ4`, choose the Java `PTJ5` or C++ `PTJ6` exit,
+and use the complete learner brief included in each starter import. Java 21,
+C++17 and Python 3 are sufficient for the dependency-free native source gate:
+`bash verify-course-source.sh`. Optional `JAVAC`, `JAVA` and `CXX` environment
+variables can select installed compilers. See `SOURCE_PACK_REVIEW.md` for the
+precise tested boundary and outstanding generated-pack/catalog mismatches.

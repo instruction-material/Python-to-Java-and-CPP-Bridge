@@ -28,4 +28,11 @@ source_count="$(find . \
 
 [ "$source_count" -gt 0 ] || fail "no source-like files found"
 
+command -v python3 >/dev/null || fail "Python 3 is required for native verification"
+command -v "${JAVAC:-javac}" >/dev/null || fail "Java 21 compiler is required"
+command -v "${JAVA:-java}" >/dev/null || fail "Java 21 runtime is required"
+command -v "${CXX:-c++}" >/dev/null || fail "C++17 compiler is required"
+
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+
 printf 'course source verification passed: %s source-like files\n' "$source_count"

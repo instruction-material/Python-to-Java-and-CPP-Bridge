@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 // Store a simple bank account with deposit and withdrawal behavior
 public class BankAccount {
     private final String owner;
@@ -11,6 +13,9 @@ public class BankAccount {
 	 * @param balance Starting balance
 	 */
     public BankAccount(String owner, double balance) {
+        if (!Double.isFinite(balance) || balance < 0) {
+            throw new IllegalArgumentException("Starting balance must be finite and non-negative");
+        }
         this.owner = owner;
         this.balance = balance;
     }
@@ -21,6 +26,10 @@ public class BankAccount {
 	 * @param amount Amount to deposit
 	 */
     public void deposit(double amount) {
+        if (!Double.isFinite(amount) || amount <= 0 ||
+            !Double.isFinite(balance + amount)) {
+            throw new IllegalArgumentException("Deposit must be finite, positive and representable");
+        }
         balance += amount;
     }
 
@@ -33,7 +42,7 @@ public class BankAccount {
 	 */
     public boolean withdraw(double amount) {
         // Reject withdrawals that exceed the current balance
-        if (amount > balance) {
+        if (!Double.isFinite(amount) || amount <= 0 || amount > balance) {
             return false;
         }
 
@@ -47,6 +56,6 @@ public class BankAccount {
 	 * @return Summary string for the account
 	 */
     public String summary() {
-        return owner + " has $" + balance;
+        return String.format(Locale.ROOT, "%s has $%.2f", owner, balance);
     }
 }

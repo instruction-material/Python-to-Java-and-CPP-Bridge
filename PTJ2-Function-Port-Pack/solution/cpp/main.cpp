@@ -25,7 +25,7 @@ const std::string VOWELS = "aeiou";
  *
  * @return Score limited to the minimum and maximum bounds
  */
-int clamp_score(int score) {
+int clampScore(int score) {
     // Return the lower bound when the score is too small
     if (score < MINIMUM_SCORE) {
         return MINIMUM_SCORE;
@@ -48,7 +48,7 @@ int clamp_score(int score) {
  *
  * @return Final total price
  */
-double total_price(double subtotal, bool member) {
+double totalPrice(double subtotal, bool member) {
     return member ? subtotal * MEMBER_DISCOUNT_RATE : subtotal;
 }
 
@@ -59,7 +59,7 @@ double total_price(double subtotal, bool member) {
  *
  * @return Number of vowels found
  */
-int count_vowels(const std::string& text) {
+int countVowels(const std::string& text) {
     int count = 0;
 
     // Normalize each character before checking for a vowel
@@ -81,7 +81,7 @@ int count_vowels(const std::string& text) {
  * @return Process exit code
  */
 int main() {
-    std::cout << clamp_score(SAMPLE_SCORE) << "\n";
-    std::cout << total_price(SAMPLE_SUBTOTAL, true) << "\n";
-    std::cout << count_vowels(SAMPLE_TEXT) << "\n";
+    std::cout << clampScore(SAMPLE_SCORE) << "\n";
+    std::cout << totalPrice(SAMPLE_SUBTOTAL, true) << "\n";
+    std::cout << countVowels(SAMPLE_TEXT) << "\n";
 }

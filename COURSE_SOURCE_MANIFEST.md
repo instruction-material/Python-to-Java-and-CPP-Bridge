@@ -2,72 +2,50 @@
 
 Canonical source repository: `Python-to-Java-and-CPP-Bridge`
 
-## Mapped Catalog Courses
+## Mapped Course and Assignment Roles
 
 - `python-to-java-and-cpp-bridge`: Python to Java and C++ Bridge
+- Shared foundation: PTJ1–PTJ4, each with a Java or C++ starter/reference branch.
+- Choose one exit: Java PTJ5 or C++ PTJ6.
+- Chosen-language capstone: PTJ7, with a supplied Python task tracker and separate
+  incomplete Java/C++ starters and target-language references.
+
+These are source assignment roles. The accompanying catalog correction must
+retire the historical links and expose explicit target-language choices. This
+manifest does not establish production activation or browser execution support.
 
 ## Verification Gate
 
-- Run `./verify-course-source.sh` from this repository root before treating the source pack as ready.
-- The verification gate checks for this manifest, the source backlog ledger, source-like files, removed Replit metadata, and any repo-specific readiness files.
-- The native gate compiles all 20 original PTJ starter/reference programs and checks their public learner APIs and real console input behavior. Java 21, C++17 and Python 3 must already be available.
-- The active BRG/graphics links below reflect the pre-correction catalog, not verified assignments. See `SOURCE_PACK_REVIEW.md` for those open content and workflow findings.
+Run `bash verify-course-source.sh` with installed Python 3, Java 21 and C++17.
+The native gate compiles all 24 starter/reference programs: 20 original PTJ
+programs and four authored capstone programs. Independent API and state-model
+checks cover unfinished starter methods, function contracts, collection ordering,
+object state, rejected operations, copy/alias behavior and real console input.
+The Java site runner is a limited preview; the object-based capstone requires
+native Java compilation. C++ uses the documented native compiler workflow.
 
-## Active Catalog Targets
+## Reviewed Assignment Folders
 
-| Folder |
-| --- |
-| `BRG-01-language-bridge-lab-11` |
-| `BRG-01-ptj0-positioning-and-workflow-translation-supplemental-3` |
-| `BRG-02-language-bridge-lab-12` |
-| `BRG-02-ptj1-functions-parameters-and-return-types-supplemental-2` |
-| `BRG-03-language-bridge-lab-13` |
-| `BRG-03-ptj1-functions-parameters-and-return-types-supplemental-3` |
-| `BRG-04-language-bridge-lab-14` |
-| `BRG-04-ptj2-collections-strings-and-indexing-supplemental-2` |
-| `BRG-05-language-bridge-lab-15` |
-| `BRG-05-ptj2-collections-strings-and-indexing-supplemental-3` |
-| `BRG-06-language-bridge-lab-16` |
-| `BRG-06-ptj3-classes-and-objects-across-languages-supplemental-2` |
-| `BRG-07-language-bridge-lab-17` |
-| `BRG-07-ptj3-classes-and-objects-across-languages-supplemental-3` |
-| `BRG-08-ptj4-java-specific-adaptation-supplemental-2` |
-| `BRG-09-ptj4-java-specific-adaptation-supplemental-3` |
-| `BRG-10-ptj5-cpp-specific-adaptation-supplemental-2` |
-| `BRG-11-ptj5-cpp-specific-adaptation-supplemental-3` |
-| `BRG-12-applied-studio-7-language-bridge-lab-11-supplemental-2` |
-| `BRG-13-applied-studio-7-language-bridge-lab-11-supplemental-3` |
-| `BRG-14-applied-studio-8-language-bridge-lab-12-supplemental-2` |
-| `BRG-15-applied-studio-8-language-bridge-lab-12-supplemental-3` |
-| `BRG-16-applied-studio-9-language-bridge-lab-13-supplemental-2` |
-| `BRG-17-applied-studio-9-language-bridge-lab-13-supplemental-3` |
-| `BRG-18-applied-studio-10-language-bridge-lab-14-supplemental-2` |
-| `BRG-19-applied-studio-10-language-bridge-lab-14-supplemental-3` |
-| `BRG-20-applied-studio-11-language-bridge-lab-15-supplemental-2` |
-| `BRG-21-applied-studio-11-language-bridge-lab-15-supplemental-3` |
-| `BRG-22-applied-studio-12-language-bridge-lab-16-supplemental-2` |
-| `BRG-23-applied-studio-12-language-bridge-lab-16-supplemental-3` |
-| `BRG-24-applied-studio-13-language-bridge-lab-17-supplemental-2` |
-| `BRG-25-applied-studio-13-language-bridge-lab-17-supplemental-3` |
-| `BRG-26-applied-studio-14-graphics-supplemental-2` |
-| `BRG-27-applied-studio-14-graphics-supplemental-3` |
-| `BRG-28-applied-studio-15-cpp-practice-supplemental-2` |
-| `BRG-29-applied-studio-15-cpp-practice-supplemental-3` |
-| `BRG-30-applied-studio-16-j1x01-java-foundations-build-12-supplemental-2` |
-| `BRG-31-applied-studio-16-j1x01-java-foundations-build-12-supplemental-3` |
-| `BRG-32-applied-studio-17-c-foundations-build-13-supplemental-2` |
-| `BRG-33-applied-studio-17-c-foundations-build-13-supplemental-3` |
-| `graphics` |
-| `PTJ1-Syntax-Translation-Warmup` |
-| `PTJ2-Function-Port-Pack` |
-| `PTJ3-Text-and-Collection-Port-Lab` |
-| `PTJ4-Shared-Class-Port` |
-| `PTJ5-Python-to-Java-Quiz-Game` |
-| `PTJ6-Python-to-CPP-Console-Port` |
+| Folder | Role |
+| --- | --- |
+| `PTJ1-Syntax-Translation-Warmup` | Shared syntax port |
+| `PTJ2-Function-Port-Pack` | Shared function port |
+| `PTJ3-Text-and-Collection-Port-Lab` | Shared collection port |
+| `PTJ4-Shared-Class-Port` | Shared class port |
+| `PTJ5-Python-to-Java-Quiz-Game` | Java exit choice |
+| `PTJ6-Python-to-CPP-Console-Port` | C++ exit choice |
+| `PTJ7-Task-Tracker-Capstone` | Chosen-language stateful capstone |
 
-## Source Inventory
+## Retained Historical/Support Folders
 
-- Top-level folders: 47
-- Active linked folders: 47
-- Ledgered inactive/support folders: 0
-- Source-like files: 174
+Forty BRG scoring clones and the JavaFX support folder are retained for source
+history. They are outside the reviewed assignment gate and must not be presented
+as distinct reviewed course projects. See `SOURCE_BACKLOG.md` for every path.
+Their original source files are unchanged by the capstone addition.
+
+## Course-folder Inventory
+
+- Source course folders: 48
+- Reviewed assignment folders: 7
+- Retained historical/support folders: 41
+- Original source filenames and paths are retained.

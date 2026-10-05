@@ -23,3 +23,12 @@ C++17 and Python 3 are sufficient for the dependency-free native source gate:
 `bash verify-course-source.sh`. Optional `JAVAC`, `JAVA` and `CXX` environment
 variables can select installed compilers. See `SOURCE_PACK_REVIEW.md` for the
 precise tested boundary and outstanding generated-pack/catalog mismatches.
+
+## Chosen-language capstone
+
+`PTJ7-Task-Tracker-Capstone` ports one complete Python task tracker into Java or
+C++. Its source/import brief contains all six method contracts and console
+fixtures. Choose `starter/java` or `starter/cpp`; completed target-language
+answers remain separately under `solution/`. Use the native compiler commands
+for the object-based project. BRG scoring clones and JavaFX examples remain
+historical/support material; see `SOURCE_BACKLOG.md` and `SOURCE_PACK_REVIEW.md`.

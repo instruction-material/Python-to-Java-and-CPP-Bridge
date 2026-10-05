@@ -1,11 +1,12 @@
+#include <stdexcept>
 #include <iostream>
 #include <string>
 #include <vector>
 
 int scoreRound(const std::string& guess,
                const std::vector<std::string>& secretWords) {
-    // TODO: return 1 when guess is in secretWords, otherwise 0
-    return 0;
+    // TODO: return 1 for membership, otherwise 0; do not mutate secretWords
+    throw std::logic_error("Implement scoreRound");
 }
 
 int main() {
@@ -15,7 +16,10 @@ int main() {
 
     for (int round = 0; round < 3; ++round) {
         std::cout << "Guess a bridge word: ";
-        std::cin >> guess;
+        if (!(std::cin >> guess)) {
+            std::cout << "Input ended after " << round << " of 3 rounds.\n";
+            break;
+        }
         score += scoreRound(guess, secretWords);
     }
 

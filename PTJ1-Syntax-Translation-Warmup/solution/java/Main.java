@@ -30,6 +30,9 @@ public class Main {
 	 * @return Non-negative absolute value
 	 */
     static int absoluteValue(int value) {
+        if (value == Integer.MIN_VALUE) {
+            throw new ArithmeticException("Absolute value does not fit in int");
+        }
         return value < 0 ? -value : value;
     }
 

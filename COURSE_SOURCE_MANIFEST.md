@@ -10,7 +10,8 @@ Canonical source repository: `Python-to-Java-and-CPP-Bridge`
 
 - Run `./verify-course-source.sh` from this repository root before treating the source pack as ready.
 - The verification gate checks for this manifest, the source backlog ledger, source-like files, removed Replit metadata, and any repo-specific readiness files.
-- Project-specific unit tests or build commands should still be run inside individual project folders when a project includes its own test harness.
+- The native gate compiles all 20 original PTJ starter/reference programs and checks their public learner APIs and real console input behavior. Java 21, C++17 and Python 3 must already be available.
+- The active BRG/graphics links below reflect the pre-correction catalog, not verified assignments. See `SOURCE_PACK_REVIEW.md` for those open content and workflow findings.
 
 ## Active Catalog Targets
 
@@ -69,4 +70,4 @@ Canonical source repository: `Python-to-Java-and-CPP-Bridge`
 - Top-level folders: 47
 - Active linked folders: 47
 - Ledgered inactive/support folders: 0
-- Source-like files: 160
+- Source-like files: 174

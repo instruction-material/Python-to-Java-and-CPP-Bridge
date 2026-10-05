@@ -20,14 +20,14 @@ const std::vector<std::string> SECRET_WORDS = {"vector", "compile", "header"};
  *
  * @param guess Word guessed by the player
  *
- * @param secret_words Accepted secret words
+ * @param secretWords Accepted secret words
  *
  * @return Points earned for the guess
  */
-int score_round(const std::string& guess,
-                const std::vector<std::string>& secret_words) {
+int scoreRound(const std::string& guess,
+                const std::vector<std::string>& secretWords) {
     // Search for the guess in the accepted word list
-    for (const std::string& word : secret_words) {
+    for (const std::string& word : secretWords) {
         // Award a point when the guess matches a secret word
         if (word == guess) {
             return POINTS_PER_MATCH;
@@ -49,8 +49,11 @@ int main() {
     // Ask for one guess per round
     for (int round = 0; round < ROUND_COUNT; ++round) {
         std::cout << "Guess a bridge word: ";
-        std::cin >> guess;
-        score += score_round(guess, SECRET_WORDS);
+        if (!(std::cin >> guess)) {
+            std::cout << "Input ended after " << round << " of 3 rounds.\n";
+            break;
+        }
+        score += scoreRound(guess, SECRET_WORDS);
     }
 
     std::cout << "Score: " << score << "\n";

@@ -1,15 +1,16 @@
+#include <stdexcept>
 #include <iostream>
 #include <string>
 #include <vector>
 
 std::vector<std::string> longWords(const std::vector<std::string>& words) {
     // TODO: return only words with length >= 5
-    return {};
+    throw std::logic_error("Implement the documented contract");
 }
 
 std::string longestWord(const std::vector<std::string>& words) {
     // TODO: return the longest word in the list
-    return "";
+    throw std::logic_error("Implement the documented contract");
 }
 
 int main() {

@@ -1,19 +1,20 @@
+#include <stdexcept>
 #include <iostream>
 #include <string>
 
 int clampScore(int score) {
     // TODO: keep score in the range 0..100
-    return 0;
+    throw std::logic_error("Implement the documented contract");
 }
 
 double totalPrice(double subtotal, bool member) {
     // TODO: apply 10% member discount when member is true
-    return 0.0;
+    throw std::logic_error("Implement the documented contract");
 }
 
 int countVowels(const std::string& text) {
     // TODO: count lowercase and uppercase vowels
-    return 0;
+    throw std::logic_error("Implement the documented contract");
 }
 
 int main() {

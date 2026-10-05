@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -37,7 +39,10 @@ std::string greeting(const std::string& name) {
  *
  * @return Non-negative absolute value
  */
-int absolute_value(int value) {
+int absoluteValue(int value) {
+    if (value == std::numeric_limits<int>::min()) {
+        throw std::overflow_error("Absolute value does not fit in int");
+    }
     return value < 0 ? -value : value;
 }
 
@@ -48,7 +53,7 @@ int absolute_value(int value) {
  *
  * @return True when the value is even
  */
-bool is_even(int value) {
+bool isEven(int value) {
     return value % EVEN_DIVISOR == 0;
 }
 
@@ -59,7 +64,7 @@ bool is_even(int value) {
  *
  * @return FizzBuzz label or the original value as text
  */
-std::string fizz_buzz_label(int value) {
+std::string fizzBuzzLabel(int value) {
     // Prefer the combined label when both divisibility rules match
     if (value % FIZZ_BUZZ_DIVISOR == 0) {
         return "FizzBuzz";
@@ -85,12 +90,12 @@ std::string fizz_buzz_label(int value) {
  */
 int main() {
     std::cout << greeting(SAMPLE_NAME) << "\n";
-    std::cout << absolute_value(NEGATIVE_SAMPLE_VALUE) << "\n";
-    std::cout << std::boolalpha << is_even(EVEN_SAMPLE_VALUE) << "\n";
+    std::cout << absoluteValue(NEGATIVE_SAMPLE_VALUE) << "\n";
+    std::cout << std::boolalpha << isEven(EVEN_SAMPLE_VALUE) << "\n";
 
     // Print the FizzBuzz label for each sample value
     for (const int value : CHECK_VALUES) {
-        std::cout << fizz_buzz_label(value) << " ";
+        std::cout << fizzBuzzLabel(value) << " ";
     }
 
     std::cout << "\n";
